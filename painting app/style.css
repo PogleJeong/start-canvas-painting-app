@@ -26,6 +26,7 @@ body {
     height: 50px;
     border-radius: 100px;
     cursor: pointer;
+    transition: transform ease-in-out .3s;
 }
 
 .color-option:hover {

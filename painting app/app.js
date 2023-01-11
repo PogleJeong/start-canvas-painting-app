@@ -56,6 +56,7 @@ function onColorChange(event) { // input(type=color)의 색상값을 변경하�
 function onColorClick(event) { // 색상버튼 누르면 선색상, 면색상 변경
     ctx.strokeStyle = event.target.dataset.color;
     ctx.fillStyle = event.target.dataset.color;
+    color.value = event.target.dataset.color;
 }
 
 function onModeClick() { // 버튼 누르면 fill / draw 모드 전환
@@ -74,7 +75,7 @@ function onDestroyClick() { //  초기화 버튼 누르면 백지상태로 변�
 }
 
 
-function onCanvasClick() { // 초기화 = 캔버스 전체크기만큼 칠해주기
+function onCanvasClick() { // 캔버스 전체크기만큼 칠해주기
     if (isFilling) {
         ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);  
     }
